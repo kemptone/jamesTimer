@@ -1,7 +1,6 @@
 #jamestimer {
   /* border:10px solid red; */
   box-sizing: border-box;
-  height:98vh;
 }
 
 body {
@@ -12,9 +11,6 @@ body {
 main {
   display:flex;
   flex-direction: column;
-}
-
-header {
 }
 
 header img {
@@ -40,7 +36,7 @@ footer select {
 }
 
 header img {
-  position: absolute;
+  position: fixed;
   top: 100px;
   left: 50%;
   width: 300px;
@@ -48,28 +44,16 @@ header img {
   margin:0 0 0 -150px;
 }
 
-.speed1 header img {
-  animation:spin 118s linear infinite;
+.start header img {
+  animation:start 1.3s ease-in;
 }
 
-.speed2 header img {
-  animation:spin 4s linear infinite;
+.end header img {
+  animation:end 2s ease-out;
 }
 
-.speed3 header img {
-  animation:spin 2s linear infinite;
-}
-
-.speed4 header img {
-  animation:spin 2s linear infinite;
-}
-
-.speed-fast header img {
-  animation:spin .3s linear infinite;
-}
-
-header img {
-  animation:spin .3s linear infinite;
+.spin header img {
+  animation:spin .7s linear infinite;
 }
 
 .controls {
@@ -89,9 +73,26 @@ header img {
   padding:8px;
 }
 
+@keyframes start {
+  0% {
+    transform:rotate(0deg); 
+  }
+  100% {
+    transform:rotate(360deg); 
+  }
+}
+
 @keyframes spin { 
   100% { 
-      -webkit-transform: rotate(360deg); 
       transform:rotate(360deg); 
   } 
+}
+
+@keyframes end {
+  0% {
+    transform:rotate(0deg); 
+  }
+  100% {
+    transform:rotate(360deg); 
+  }
 }

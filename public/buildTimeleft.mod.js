@@ -2,7 +2,10 @@ export default All => {
 
   return function buildTimeleftHtml () {
 
-    console.log( All.alarm )
+    console.log({
+      alarm : All.alarm
+      , elapsed_time : All.elapsed_time
+    })
 
     const alarm = All.alarm
 

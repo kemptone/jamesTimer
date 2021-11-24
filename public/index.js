@@ -16,7 +16,10 @@ const All = {
   , e_minutes : document.getElementById("minutes")
   , e_seconds : document.getElementById("seconds")
   , e_timeleft : document.getElementById("timeleft")
+  , e_image : document.querySelector("header img")
+  , set_alarm : 0
   , alarm : 0
+  , elapsed_time : 0
   , max : {
     hours : buildRange(24)
     , minutes : buildRange(60)
