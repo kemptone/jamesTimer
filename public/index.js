@@ -26,6 +26,26 @@ const All = {
     , seconds : buildRange(60)
   }
   , interval : undefined
+  , sounds : {
+
+    start : e => new Howl({
+      src : ["Sounds/middle.mp3"]
+      , rate : .1
+      , loop : true
+    })
+
+    , middle : e => new Howl({
+      src : ["Sounds/middle.mp3"]
+      , rate : .5
+      , loop : true
+    })
+
+    , end : e => new Howl({
+      src : ["Sounds/end.mp3"]
+      , rate : .4
+    })
+
+  }
 }
 
 setAlarmMod(All)
